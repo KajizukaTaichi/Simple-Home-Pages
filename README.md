@@ -1,2 +1,2 @@
-# Simple-Home-Pages
-Simpleプログラミング言語の公式ホームページ
+# kajizukataichi.github.io
+梶塚太智のプロジェクトの公式サイト
