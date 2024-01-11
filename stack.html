@@ -10,11 +10,18 @@
     <style>
         body {
             padding: 20px;
+            padding-top: 80px;
+        }
+
+        h2 , p {
+            font-weight: normal;
+        }
+        .btn {
+            margin-right: 15px;
         }
 
         nav {
             margin-bottom: 30px;
-            border-radius: 5px;
             font-weight: 20;
         }
 
@@ -28,7 +35,7 @@
         .jumbotron {
             background-color: #343a40;
             color: #ffffff;
-            padding: 20px;
+            padding: 30px;
         }
 
         .feature-list {
@@ -37,11 +44,10 @@
         }
 
         .feature-list li {
-            padding: 10px 0;
+            padding: 8px 0;
         }
         
         h2 {
-            font-weight: 20;
             padding: 10px 0;
             border-bottom: 2px solid #dee2e6;
         }
@@ -51,7 +57,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Stack Programing Language</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +65,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -81,10 +87,9 @@
     <!-- Jumbotron -->
     <div class="jumbotron">
         <h1 class="display-4">Stack Programing Language</h1>
-        <p class="lead">Stack is a powerful script language designed with a stack oriented approach for efficient execution.</p>
-        <hr class="my-4">
-        <p>Stack Programing Language is published on Github.</p>
-        <a class="btn btn-primary btn-lg" href="https://github.com/KajizukaTaichi/Stack-Programing-Language/" role="button">Go repogitory</a>
+        <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.</p>
+        <hr class="my-3">
+        <a class="btn btn-primary btn-lg" href="https://github.com/KajizukaTaichi/Stack-Programing-Language/" role="button">Github Repogitory</a>
     </div>
 
     <!-- Features -->
@@ -100,7 +105,7 @@
 
     <div id="example">
         <h2>Example</h2>
-        <p>this is FizzBuzz example code of Stack Programing Language.</p>
+        <p>This is FizzBuzz example code of Stack Programing Language.</p>
         <pre>
 (
     (i) var
@@ -142,7 +147,7 @@
     <div id="license">
         <h2>License</h2>
         <p>
-            The Stack programing language is freedom and open source under the MIT License. everyone can use, modify, and share it.
+            Stack programing language is freedom and open source under the MIT License. everyone can use, modify, and share it.
             See the <a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a> file for details.
         </p>
     </div>
