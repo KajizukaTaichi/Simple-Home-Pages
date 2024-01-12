@@ -1,133 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stack Programing Language</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Programing Language</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding: 20px;
-            padding-top: 95px;
-        }
-
-        h2 {
-            font-weight: 420;
-        }
-
-        .display-4 {
-            font-weight: 500;
-        }
-
-        p, li, a , .lead{
-            font-weight: 350;
-            font-size: x-large;
-        }
-
-        nav {
-            margin-bottom: 30px;
-            font-weight: 20;
-        }
-
-        .btn {
-            margin: 5px;
-            background-color: lightslategray;
-            border-color: lightslategray;
-        }
-
-        pre {
-            background-color:gainsboro;
-            color: black;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-        .jumbotron {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 30px;
-        }
-
-        .feature-list {
-            list-style-type: decimal;
-            padding: 5;
-        }
-
-        .my-4 {
-            background-color: lightgray;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-        }
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Stack Programing Language</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example">Example</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contribute">Contribute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#license">License</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         
-        h2 {
-            padding: 10px 0;
-            font-size: xx-large;
-            
-            border-bottom-color: #343a40;
-            border-bottom-width: 2px;
-            border-bottom-style: solid;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Stack Programing Language</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#example">Example</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contribute">Contribute</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#license">License</a>
-                </li>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Stack Programing Language</h1>
+            <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.
+            </p>
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" href="https://github.com/KajizukaTaichi/Stack-Programing-Language/"
+                role="button">
+                Github Repogitory
+            </a>
+            <a class="btn btn-primary btn-lg" href="https://qiita.com/KajizukaTaichi/items/1c3e3ee08d102bfd576c"
+                role="button">
+                Qiita Article
+            </a>
+        </div>
+        
+        <!-- Features -->
+        <div id="features">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Efficient stack oriented execution model</li>
+                <li>Clear, easy to understand, and elegant syntax</li>
+                <li>Rich of great commands useful for development</li>
+                <li>Flexible and powerful data type system</li>
             </ul>
         </div>
-    </nav>
-
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-        <h1 class="display-4">Stack Programing Language</h1>
-        <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="https://github.com/KajizukaTaichi/Stack-Programing-Language/" role="button">Github Repogitory</a>
-        <a class="btn btn-primary btn-lg" href="https://qiita.com/KajizukaTaichi/items/1c3e3ee08d102bfd576c" role="button">Qiita Article</a>
-    </div>
-
-    <!-- Features -->
-    <div id="features">
-        <h2>Features</h2>
-        <ul class="feature-list">
-            <li>Efficient stack oriented execution model</li>
-            <li>Clear, easy to understand, and elegant syntax</li>
-            <li>Rich of great commands useful for development</li>
-            <li>Flexible and powerful data type system</li>
-        </ul>
-    </div>
-
-    <div id="example">
-        <h2>Example</h2>
-        <p>This is FizzBuzz example code of Stack Programing Language.</p>
-        <pre>
+        <div id="example">
+            <h2>Example</h2>
+            <p>This is FizzBuzz example code of Stack Programing Language.</p>
+            <pre>
 (
     (i) var
     ((FizzBuzz) print )
@@ -154,29 +94,100 @@
 (i) (
     i fizzbuzz eval
 ) for
-        </pre>
-    </div>
+            </pre>
+        </div>
+        
+        <!-- Contribute -->
+        <div id="contribute">
+            <h2>Contribute</h2>
+            <p>Any contributions are welcome! Feel free to open issues for bug reports or feature requests, <br>and submit
+                pull requests to
+                enhance the Stack Programing Language.
+            </p>
+        </div>
+        
+        <!-- License -->
+        <div id="license">
+            <h2>License</h2>
+            <p>
+                Stack programing language is freedom and open source software under the MIT License. <br>everyone can use,
+                modify, and share it.
+                See the <a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a>
+                file for details.
+            </p>
+        </div>
+        
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+        <style>
+            body {
+                padding: 20px;
+                padding-top: 95px;
+            }
 
-    <!-- Contribute -->
-    <div id="contribute">
-        <h2>Contribute</h2>
-        <p>Any contributions are welcome! Feel free to open issues for bug reports or feature requests, <br>and submit pull requests to
-        enhance the Stack Programing Language.</p>
-    </div>
+            h2 {
+                font-weight: 420;
+            }
 
-    <!-- License -->
-    <div id="license">
-        <h2>License</h2>
-        <p>
-            Stack programing language is freedom and open source software under the MIT License. <br>everyone can use, modify, and share it.
-            See the <a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a> file for details.
-        </p>
-    </div>
+            .display-4 {
+                font-weight: 500;
+            }
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+            p,
+            li,
+            a,
+            .lead {
+                font-weight: 350;
+                font-size: x-large;
+            }
 
+            nav {
+                margin-bottom: 30px;
+                font-weight: 20;
+            }
+
+            .btn {
+                margin: 5px;
+                background-color: lightslategray;
+                border-color: lightslategray;
+            }
+
+            pre {
+                background-color: gainsboro;
+                color: black;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            .jumbotron {
+                background-color: #343a40;
+                color: #ffffff;
+                padding: 30px;
+            }
+
+            .feature-list {
+                list-style-type: decimal;
+                padding: 5;
+            }
+
+            .my-4 {
+                background-color: lightgray;
+            }
+
+            .feature-list li {
+                padding: 8px 0;
+            }
+
+            h2 {
+                padding: 10px 0;
+                font-size: xx-large;
+                border-bottom-color: #343a40;
+                border-bottom-width: 2px;
+                border-bottom-style: solid;
+            }
+        </style>
+    </body>
 </html>
