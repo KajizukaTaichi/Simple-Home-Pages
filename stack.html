@@ -66,33 +66,30 @@
         </div>
         <div id="example">
             <h2>Example</h2>
-            <p>This is FizzBuzz example code of Stack Programing Language.</p>
+            <p>This is example code about calculate the Fibonacci sequence in the Stack Programing Language.</p>
             <pre>
-(
-    (i) var
-    ((FizzBuzz) print )
-    i 15 mod 0 equal if
+( (n) var
 
-    ( 
-        ((Fizz) print )
-        i 3 mod 0 equal if 
+    0 (a) var
+    1 (b) var
+    (a) n 1 equal if
+    (b) n 2 equal if
 
-        (
-            ((Buzz) print )
-            i 5 mod 0 equal if 
+    (
+        0 n 2 sub 1 range (i) (
+            b (temp) var
+            a b add (b) var
+            temp (a) var
+        ) for
+        b
+    ) 1 n less if
+) (fibonacci) var
 
-            (i print )
-            i 5 mod 0 equal not if
-        )
-        i 3 mod 0 equal not if
-    )
-    i 15 mod 0 equal not if 
-)
-(fizzbuzz) var
-
-1 101 1 range
-(i) (
-    i fizzbuzz eval
+0 9 1 range 
+(n) (
+    n 1 add 
+    fibonacci eval 
+    print
 ) for
             </pre>
         </div>
@@ -100,9 +97,9 @@
         <!-- Contribute -->
         <div id="contribute">
             <h2>Contribute</h2>
-            <p>Any contributions are welcome! Feel free to open issues for bug reports or feature requests, <br>and submit
-                pull requests to
-                enhance the Stack Programing Language.
+            <p>
+                Any contributions are welcome! Feel free to open issues for bug reports or feature requests,
+                and submit pull requests to enhance the Stack Programing Language.
             </p>
         </div>
         
@@ -110,10 +107,9 @@
         <div id="license">
             <h2>License</h2>
             <p>
-                Stack programing language is freedom and open source software under the MIT License. <br>everyone can use,
-                modify, and share it.
-                See the <a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a>
-                file for details.
+                Stack programing language is freedom and open source software under the MIT License. 
+                everyone can use, modify, and share it.
+                See the <a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a> file for details.
             </p>
         </div>
         
