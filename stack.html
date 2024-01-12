@@ -131,8 +131,8 @@
                 function checkJumbotronVisibility() {
                     var jumbotronRect = jumbotron.getBoundingClientRect();
                     jumbotronVisible = (
-                        jumbotronRect.top >= 0 &&
-                        jumbotronRect.left >= 0 &&
+                        jumbotronRect.top >= -150 &&
+                        jumbotronRect.left >= -150 &&
                         jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                         jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
                     );
