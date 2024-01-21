@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kajizuka Taichi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* フォント */
+            background-color: #f4f4f4;
+            /* 背景色 */
+            color: #333333;
+            /* テキストカラー */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .jumbotron {
+            background-color: rgba(24, 103, 182, 0.8);
+            border-radius: 0px;
+            color: #fff;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 2rem 4rem; /* 上下左右の余白を調整 */
+        }
+
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* カードの幅を100%に変更 */
+            margin-bottom: 1.5rem; /* カード同士の間隔を調整 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- タイトル -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4 slide-in-name1">Kajizuka Taichi</h1>
+        <p class="lead slide-in-name2">Stay hungry, stay foolish.</p>
+
+        <div class="slide-in-name3">
+            <a href="https://github.com/KajizukaTaichi" target="_blank" class="btn btn-info mr-2">
+                GitHub
+            </a>
+            <a href="https://qiita.com/KajizukaTaichi" target="_blank" class="btn btn-info mr-2">
+                Qiita
+            </a>
+            <a href="https://note.com/super_auklet908" target="_blank" class="btn btn-info">
+                Note
+            </a>
+        </div>
+    </div>
+
+    <!-- プロジェクト -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Projects</h2>
+        <div class="row">
+            <!-- プロジェクト カード1 -->
+            <div class="col-md-4 mb-4 slide-in-name">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Stack Programing Language</h5>
+                        <p class="card-text">The powerful script language designed with a stack oriented approach for efficient execution.</p>
+                        <a href="/stack.html" class="btn btn-primary">Official site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 slide-in-name">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">PC-9801 UI Emulator</h5>
+                        <p class="card-text">Reproduction of the nostalgic user interface of NEC PC-9801</p>
+                        <a href="https://github.com/KajizukaTaichi/PC9801-UI-Emulator" class="btn btn-primary">Github Repogitory</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 名前を右からスライドして表示
+            anime({
+                targets: '.slide-in-name1',
+                translateY: ['100%', '0%'],
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 1000,
+                delay: 500
+            });
+
+            anime({
+                targets: '.slide-in-name2',
+                translateY: ['100%', '0%'],
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 1000,
+                delay: 1000
+            });
+
+            anime({
+                targets: '.slide-in-name3',
+                translateY: ['100%', '0%'],
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 1000,
+                delay: 1500
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
