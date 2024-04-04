@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Kajizuka Taichi</title>
+    <title>梶塚 太智</title>
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -14,78 +14,82 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            /* フォント */
             background-color: #f4f4f4;
-            /* 背景色 */
             color: #333333;
-            /* テキストカラー */
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
         }
-
+    
         .jumbotron {
-            background-color: rgba(24, 103, 182, 0.8);
+            background-color: rgba(65, 72, 88, 0.8);
             border-radius: 0px;
             color: #fff;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-            padding: 2rem 4rem; /* 上下左右の余白を調整 */
+            padding: 2rem 4rem;
         }
-
+    
         .project-card {
             transition: transform 0.3s ease-in-out;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%; /* カードの幅を100%に変更 */
-            margin-bottom: 1.5rem; /* カード同士の間隔を調整 */
+            width: 100%;
+            margin-bottom: 1.5rem;
         }
-    </style>
+    
+        /* 追加 */
+        .jumbotron .row {
+            justify-content: flex-start; /* 左揃えに設定 */
+        }
+    </style>    
 </head>
 
 <body>
 
     <!-- タイトル -->
-    <div class="jumbotron text-center">
-        <h1 class="display-4 slide-in-name1">Kajizuka Taichi</h1>
-        <p class="lead slide-in-name2">Developing original programing languages</p>
-
-        <div class="slide-in-name3">
-            <a href="https://github.com/KajizukaTaichi" target="_blank" class="btn btn-info mr-2">
-                GitHub
-            </a>
-            <a href="https://qiita.com/KajizukaTaichi" target="_blank" class="btn btn-info mr-2">
-                Qiita
-            </a>
-            <a href="https://note.com/super_auklet908" target="_blank" class="btn btn-info">
-                Note
-            </a>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <img src="https://avatars.githubusercontent.com/u/122075081?v=4" alt="写真" class="img-fluid icon rounded-circle" style="width: 15%;">
+                 
+                <div class="col">
+                    <h1 class="display-4">梶塚 太智</h1>
+                    <p class="lead">Stay hungry, stay foolish.</p> 
+                    <a href="https://github.com/KajizukaTaichi" class="btn btn-primary mr-2">
+                        GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- プロジェクト -->
     <div class="container mt-5">
-        <h2 class="mb-4">Projects</h2>
+        <h2 class="mb-4">プロジェクト</h2>
         <div class="row">
             <!-- プロジェクト カード1 -->
-            <div class="col-md-4 mb-4 slide-in-name">
+            <div class="col-md-8 mb-4 slide-in-name">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">Stack Programing Language</h5>
-                        <p class="card-text">The powerful script language designed with a stack oriented approach for efficient execution.</p>
-                        <a href="https://stack-programing-community.github,io/stack.html" class="btn btn-primary">Official site</a>
+                        <h5 class="card-title">Stack プログラミング言語</h5>
+                        <p class="card-text">効率的な実行を目指しスタック指向のアプローチで設計された強力なスクリプト言語</p>
+                        <a href="https://stack-community.github.io/" class="btn btn-primary">公式サイト</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-4 mb-4 slide-in-name">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title">PC-9801 UI Emulator</h5>
-                        <p class="card-text">Reproduction of the nostalgic user interface of NEC PC-9801</p>
-                        <a href="https://github.com/KajizukaTaichi/PC9801-UI-Emulator" class="btn btn-primary">Github Repogitory</a>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
 
+    <!-- プロジェクト -->
+    <div class="container mt-5">
+        <h2 class="mb-4">受賞歴</h2>
+        <div class="row">
+            <!-- プロジェクト カード1 -->
+            <div class="col-md-8 mb-4 slide-in-name">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">学力向上アプリコンテスト 奨励賞</h5>
+                        <p class="card-text">歴史の因果関係をタイムライン形式で学べる「歴史タイムライン」というアプリを開発しました</p>
+                        <a href="https://www.gakuryokuup.com/past_entries/4th/winners_4th#h.vims7ptiso7w" class="btn btn-primary">公式サイト</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -96,38 +100,6 @@
 
     <!-- anime.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 名前を右からスライドして表示
-            anime({
-                targets: '.slide-in-name1',
-                translateY: ['100%', '0%'],
-                opacity: [0, 1],
-                easing: 'easeInOutQuad',
-                duration: 1000,
-                delay: 500
-            });
-
-            anime({
-                targets: '.slide-in-name2',
-                translateY: ['100%', '0%'],
-                opacity: [0, 1],
-                easing: 'easeInOutQuad',
-                duration: 1000,
-                delay: 1000
-            });
-
-            anime({
-                targets: '.slide-in-name3',
-                translateY: ['100%', '0%'],
-                opacity: [0, 1],
-                easing: 'easeInOutQuad',
-                duration: 1000,
-                delay: 1500
-            });
-        });
-    </script>
 
 
 </body>
