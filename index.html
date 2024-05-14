@@ -20,17 +20,23 @@
         }
     
         .jumbotron {
-            background-color: rgba(65, 72, 88, 0.8);
+            background:-webkit-linear-gradient(rgba(65, 72, 88, 0.8),rgba(100, 100, 100, 0.8));
             border-radius: 0px;
             color: #fff;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
             padding: 2rem 4rem;
+        }
+
+        .intro {
+            font-size: small;
+            width: 60%;
         }
     
         .project-card {
             transition: transform 0.3s ease-in-out;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 1.5rem;
+            color: #333333;
         }
     
         /* 追加 */
@@ -54,6 +60,13 @@
                     <a href="https://github.com/KajizukaTaichi" class="btn btn-primary mr-2">
                         GitHub アカウント
                     </a>
+                </div>
+
+                <div class="card project-card intro">
+                    <div class="card-body">
+                        <h5 class="card-title">自己紹介</h5>
+                        <p class="card-text">Pythonからプログラミングの世界に飛び込み、数多くのデスクトップアプリやWebシステムを開発しました。RustでOS開発に挑戦したものの挫折し、学力向上アプリコンテストで奨励賞を取りました。その後はSimpleやStackなどのプログラミング言語を自作して、現在はそのStackプログラミング言語のコミュニティを立ち上げて活動しています。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,11 +111,6 @@
         </div>
     </div>
 
-    <div class="container mt-5">
-        <h2>プログラミング経験</h2>
-        <canvas id="myChart" width="1000" height="400"></canvas>
-    </div>
-
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -110,59 +118,5 @@
     
     <!-- anime.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-
-    <script>
-        // データ
-        const data = {
-            labels: ['Rust', 'Python', "JavaScript", 'HTML/CSS', "Haskell"],
-            datasets: [{
-                label: 'プログラミング経験(年)',
-                data: [1.4, 2.9, 1.8, 2.0, 0.6],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(120, 32, 75, 0.2)',
-                    'rgba(65, 62, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(120, 32, 75, 1)',
-                    'rgba(65, 62, 235, 1)',
-                    'rgba(255, 206, 86, 1)'
-                ],
-                borderWidth: 1
-            }]
-        };
-
-        // オプション
-        const options = {
-            indexAxis: 'y', // y軸を使用して横棒グラフを描画
-            scales: {
-                xAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            },
-            responsive: false,
-            title: {
-                display: true,
-                text: 'Language Experience'
-            }
-        };
-
-        // Canvas要素を取得
-        const ctx = document.getElementById('myChart').getContext('2d');
-
-        // 横棒グラフを描画
-        const myBarChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: options
-        });
-
-    </script>
 </body>
 </html>
