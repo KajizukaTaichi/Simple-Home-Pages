@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>梶塚 太智</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Custom styles -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>梶塚 太智</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             color: #333333;
         }
-    
+
         .jumbotron {
-            background:-webkit-linear-gradient(rgba(65, 72, 88, 0.8),rgba(100, 100, 100, 0.8));
-            border-radius: 0px;
+            background: -webkit-linear-gradient(rgba(65, 72, 88, 0.8), rgba(100, 100, 100, 0.8));
+            border-radius: 0;
             color: #fff;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             padding: 2rem 4rem;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            color: #333333;
+        }
+
+        .jumbotron .row {
+            justify-content: flex-start;
+            /* 左揃えに設定 */
+            align-items: center;
+        }
+
+        .icon {
+            max-width: 100%;
+            /* アイコンの最大幅を100%に設定 */
         }
 
         .intro {
             font-size: small;
-            width: 60%;
+            width: 100%;
+            /* Full width for mobile */
         }
-    
-        .project-card {
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-            color: #333333;
+
+        @media (min-width: 768px) {
+            .intro {
+                width: auto;
+                /* 768px以上の画面幅では自動幅 */
+            }
         }
-    
-        /* 追加 */
-        .jumbotron .row {
-            justify-content: flex-start; /* 左揃えに設定 */
-        }
-    </style>    
+    </style>
 </head>
 
 <body>
@@ -52,20 +65,23 @@
     <div class="jumbotron">
         <div class="container">
             <div class="row">
-                <img src="https://avatars.githubusercontent.com/u/122075081?v=4" alt="写真" class="img-fluid icon rounded-circle" style="width: 15%;">
-                 
-                <div class="col">
-                    <h1 class="display-4">梶塚 太智</h1>
-                    <p class="lead">Stay hungry, stay foolish.</p> 
-                    <a href="https://github.com/KajizukaTaichi" class="btn btn-primary mr-2">
-                        GitHub アカウント
-                    </a>
+                <div class="col-4 col-md-2">
+                    <img src="https://avatars.githubusercontent.com/u/122075081?v=4" alt="写真"
+                        class="img-fluid icon rounded-circle">
                 </div>
-
-                <div class="card project-card intro">
-                    <div class="card-body">
-                        <h5 class="card-title">自己紹介</h5>
-                        <p class="card-text">Pythonからプログラミングの世界に飛び込み、数多くのデスクトップアプリやWebシステムを開発しました。RustでOS開発に挑戦したものの挫折し、学力向上アプリコンテストで奨励賞を取りました。その後はSimpleやStackなどのプログラミング言語を自作して、現在はそのStackプログラミング言語のコミュニティを立ち上げて活動しています。</p>
+                <div class="col-8 col-md-4">
+                    <h1 class="display-4">梶塚 太智</h1>
+                    <p class="lead">Stay hungry, stay foolish.</p>
+                    <a href="https://github.com/KajizukaTaichi" class="btn btn-primary mr-2">GitHub アカウント</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card project-card intro">
+                        <div class="card-body">
+                            <h5 class="card-title">自己紹介</h5>
+                            <p class="card-text">
+                                Pythonからプログラミングの世界に飛び込み、数多くのデスクトップアプリやWebシステムを開発しました。RustでOS開発に挑戦したものの挫折し、学力向上アプリコンテストで奨励賞を取りました。その後はSimpleやStackなどのプログラミング言語を自作して、現在はそのStackプログラミング言語のコミュニティを立ち上げて活動しています。
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +93,7 @@
         <h2 class="mb-4">プロジェクト</h2>
         <div class="row">
             <!-- プロジェクト カード1 -->
-            <div class="col-md-4 mb-5">
+            <div class="col-md-4 mb-4">
                 <div class="card project-card">
                     <div class="card-body">
                         <h5 class="card-title">Stack プログラミング言語</h5>
@@ -86,7 +102,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- プロジェクト カード2 -->
             <div class="col-md-4 mb-4">
                 <div class="card project-card">
@@ -97,14 +112,14 @@
                     </div>
                 </div>
             </div>
-
-            <!-- プロジェクト カード2 -->
+            <!-- プロジェクト カード3 -->
             <div class="col-md-4 mb-4">
                 <div class="card project-card">
                     <div class="card-body">
                         <h5 class="card-title">学力向上アプリコンテスト 奨励賞</h5>
                         <p class="card-text">歴史の因果関係をタイムライン形式で学べる「歴史タイムライン」というアプリで</p>
-                        <a href="https://www.gakuryokuup.com/past_entries/4th/winners_4th#h.vims7ptiso7w" class="btn btn-primary">公式サイト</a>
+                        <a href="https://www.gakuryokuup.com/past_entries/4th/winners_4th#h.vims7ptiso7w"
+                            class="btn btn-primary">公式サイト</a>
                     </div>
                 </div>
             </div>
@@ -115,8 +130,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
     <!-- anime.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 </body>
+
 </html>
