@@ -20,6 +20,14 @@
             font-weight: bold;
         }
 
+        .card {
+            margin-bottom: 1vh;
+        }
+
+        .card-header {
+            background-color: transparent;
+        }
+
         .section-title {
             margin-bottom: 40px;
         }
@@ -60,6 +68,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#develop">開発</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">お問い合わせ</a>
@@ -130,8 +141,64 @@
         </div>
     </section>
 
+    <!-- Faq Section -->
+    <section id="faq" class="bg-light py-5">
+        <div class="container text-center mt-5">
+            <h2 class="h5">FAQ</h2>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                aria-controls="collapseOne" aria-expanded="false">
+                                電気通信大学とは関係がありますか？
+                            </button>
+                        </h5>
+                    </div>
+        
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <a href="https://www.uec-programming.com">電気通信大学プログラミング教室</a>に所属する生徒が開発したものであり、国立大学法人電気通信大学及び関連する団体とは一切の関係がありません
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                どうやって動かしますか？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            UEC Basicの動作にはPythonのインタプリタが必要です。それも合わせてインストールしてください
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                商用利用したいのですが？
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            MITライセンスなので著作権表示さえ守れば全然OKです。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
     <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="h5 text-center">お問い合わせ</h2>
             <p class="text-center">ご質問やご意見がございましたら、お気軽にお問い合わせください。</p>
