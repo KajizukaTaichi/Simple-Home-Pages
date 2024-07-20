@@ -1,42 +1,66 @@
 <!doctype html>
 <html>
-    <head>
-        <title>ぷっぷくぷー</title>
-    </head>
-
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const key = urlParams.get('msg');
+        
+        let key = urlParams.get('msg');
         let message;
 
         if (key !== null) {
             message = key;
+            document.title = key;
+        }
+
+        key = urlParams.get('color');
+        let color;
+
+        if (key !== null) {
+            color = key;
+        }
+
+        key = urlParams.get('back');
+        let back;
+
+        if (key !== null) {
+            back = key;
+        }
+
+        key = urlParams.get('time');
+        let time;
+
+        if (key !== null) {
+            time = key;
+        } else {
+            time = 500;
         }
         
         let count = 10;
-        let addWindow = function() {
-            let window = document.createElement("div");     
+        let addpopup = function() {
+            let popup = document.createElement("div");     
 
             let max = document.documentElement.clientHeight - 300;
-            window.style.top = `${Math.floor(Math.random() * max)}px`;
+            popup.style.top = `${Math.floor(Math.random() * max)}px`;
             max = document.documentElement.clientWidth - 500;
-            window.style.left = `${Math.floor(Math.random() * max)}px`;
+            popup.style.left = `${Math.floor(Math.random() * max)}px`;
+
+            popup.style.backgroundColor = back;
+            popup.style.color = color;
             
-            window.addEventListener("click", function() {
-                addWindow()
+            popup.addEventListener("click", function() {
+                addpopup()
             });
 
             let title = document.createElement("h1");
             title.innerText = message;
 
-            window.appendChild(title);
-            document.body.appendChild(window);
+            popup.appendChild(title);
+            document.body.appendChild(popup);
             count += 20;
         };
 
         document.addEventListener("DOMContentLoaded", function() {
-            setInterval(addWindow, 300)
+            setInterval(addpopup, time)
         })
     </script>
 
