@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ぷっぷくぷー</title>
+    </head>
+
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const key = urlParams.get('msg');
+        let message;
+
+        if (key !== null) {
+            message = key;
+        }
+        
+        let count = 10;
+        let addWindow = function() {
+            let window = document.createElement("div");     
+
+            let max = document.documentElement.clientHeight - 300;
+            window.style.top = `${Math.floor(Math.random() * max)}px`;
+            max = document.documentElement.clientWidth - 500;
+            window.style.left = `${Math.floor(Math.random() * max)}px`;
+            
+            window.addEventListener("click", function() {
+                addWindow()
+            });
+
+            let title = document.createElement("h1");
+            title.innerText = message;
+
+            window.appendChild(title);
+            document.body.appendChild(window);
+            count += 20;
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setInterval(addWindow, 300)
+        })
+    </script>
+
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+
+            position: absolute;
+            background-color: #f0f0f0;
+            padding: 10px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</html>
