@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js"></script>
+        <title>梶塚太智の自作言語たち</title>
+    </head>
+
+    <body>
+        <h1>梶塚太智の自作言語たち</h1>
+        <p>梶塚太智</p>
+        <hr />
+
+        <h2>1. Simple</h2>
+        <p>開発期間：2023年9月4日〜2024年1月10日</p>
+        <p>
+            逆ポーランド記法の計算機に変数機能と制御構文をゴテゴテ付けて作った言語。<br />
+            学力向上アプリコンテスト以来コンピュータ科学教育に興味があったので、デバッグ時にプログラムを解説する機能を付けて教育用言語にした。。<br />
+            商業化を試みたもののコードが肥大化し、プロジェクトは後継のStackに移っていく。
+        </p>
+        <textarea readonly>
+var i = 1
+for 100
+    if i 15 % 0 =
+        print FizzBuzz
+    else
+        if i 3 % 0 =
+            print Fizz
+        else
+            if i 5 % 0 =
+                print Buzz
+            else
+                print i
+            end if
+        end if
+    end if
+    var i = i 1 +
+end for</textarea
+        >
+    </body>
+
+    <script>
+        editor = document.querySelectorAll("textarea").forEach((i) =>
+            CodeMirror.fromTextArea(i, {
+                lineNumbers: true,
+                mode: "javascript",
+                indentUnit: 4,
+                autoCloseBrackets: true,
+            }),
+        );
+    </script>
+</html>
