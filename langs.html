@@ -11,10 +11,15 @@
 
     <body>
         <h1>梶塚太智の自作言語たち</h1>
-        <p>梶塚太智</p>
+        <p>
+            自作言語処理系の開発が大好きなプログラマ梶塚太智の作ったプログラミング言語たちのまとめサイトです。
+        </p>
         <hr />
 
         <h2>1. Simple</h2>
+        <a href="https://kajizukataichi.github.io/simple.html"
+            >https://kajizukataichi.github.io/simple.html</a
+        >
         <p>開発期間：2023年9月4日〜2024年1月10日</p>
         <p>
             逆ポーランド記法の計算機に変数機能と制御構文をゴテゴテ付けて作った言語。<br />
@@ -42,12 +47,15 @@ end for</textarea
         >
 
         <h2>2. Stack</h2>
+        <a href="https://stack-community.github.io/"
+            >https://stack-community.github.io/</a
+        >
         <p>開発期間：2023年12月25日〜2024年9月9日</p>
         <p>
             有名な技術書「Land of
             Lisp」に触発され、Simpleを再構築して作った純粋スタック指向言語。<br />
             最初はSimpleのバージョン２にする予定だったが、あまりにも違いが多いため別言語となった。<br />
-            シェル機能やWebサーバからGUIウィンドウに画像処理そして数値計算などなど様々なディストリビューションが生まれ、開発は８ヶ月も続いた私史上最大のプロジェクト。<br />
+            シェル機能やWebサーバ、GUIウィンドウ、画像処理そして数値計算などなど様々なディストリビューションが生まれ、開発は８ヶ月も続いた私史上最大のプロジェクト。<br />
             U-22プログラミングコンテストに応募して結果待ちの状態。開発は既にPravdaに移っている。
         </p>
         <textarea readonly>
@@ -62,16 +70,125 @@ end for</textarea
     i 15 mod 0 equal if
 ) map (\n) join print
         </textarea>
+
+
+        <h2>3. Kajisp</h2>
+        <a href="https://kajizukataichi.github.io/script-s.html"
+            >https://kajizukataichi.github.io/script-s.html</a
+        >
+        <p>開発期間：2024年7月12日〜2024年8月23日</p>
+        <p>
+            簡単なLispインタプリタ。プロジェクト名は苗字から取っている。
+        </p>
+        <textarea readonly>
+(def number (input "Enter the number: "))
+  (if (= (% (number) 2) 0)
+    (data println "It's even")
+    (data println "It's odd"))      </textarea>
+            </body>
+
+        <h2>4. Script S</h2>
+        <a href="https://kajizukataichi.github.io/script-s.html"
+            >https://kajizukataichi.github.io/script-s.html</a
+        >
+        <p>開発期間：2024年7月26日〜2024年8月23日</p>
+        <p>
+            エコシステムを活用できるPythonの代替として開発を始めた言語。バックエンドには自作のトランスパイラ基盤Silaが使われている。
+        </p>
+        <textarea readonly>
+// This program is to solve FizzBuzz;
+
+fn fizzbuzz(i) {
+    if i % 15 == 0 {
+        return "FizzBuzz";
+    };
+    if i % 5 == 0 {
+        return "Buzz";
+    };
+    if i % 3 == 0 {
+        return "Fizz";
+    };
+    return str(i);
+};
+
+fn add_text(source, text) {
+    return source + text + " "
+};
+
+var i &lt;- 0;
+var result &lt;- "";
+while i &lt; 100 {
+    var i &lt;- i + 1;
+    var result &lt;- add_text(result, fizzbuzz(i));
+};
+print result;
+        </textarea>
+
+        <h2>5. Noze</h2>
+        <a href="https://github.com/KajizukaTaichi/noze"
+            >https://github.com/KajizukaTaichi/noze</a
+        >
+        <p>開発期間：2024年8月27日〜現在</p>
+        <p>
+            低レイヤな日本語プログラミング言語。語尾に「のぜ」を付けるなど当初はジョーク言語だったが、学力向上アプリコンテストに向け次第に教育用途になった。
+        </p>
+        <textarea readonly>
+「数当てゲーム！」を表示するのぜ。
+範囲は１と１０１と１を範囲にするのぜ。
+秘密は範囲をランダムに取得するのぜ。
+
+繰り返し起点なのぜ。
+    答えは「当ててみて：」を入力待ちするのぜ。
+    旗は答えと秘密を等しいか比較するのぜ。
+    勝者の地と旗を条件付きで移動するのぜ。
+
+    小さい？は答えと秘密を小さいか比較するのぜ。
+    大きい？は答えと秘密を大きいか比較するのぜ。
+
+    小さ過ぎと小さい？を条件付きで移動するのぜ。
+    大き過ぎと大きい？を条件付きで移動するのぜ。
+
+    小さ過ぎなのぜ。
+        「小さ過ぎ」を表示するのぜ。
+        繰り返し起点を移動するのぜ。
+    大き過ぎなのぜ。
+        「大き過ぎ」を表示するのぜ。
+        繰り返し起点を移動するのぜ。
+
+勝者の地なのぜ。
+    「クリア！」を表示するのぜ。
+        </textarea>
+
+
+        <h2>6. Pravda</h2>
+        <a href="https://pravda-lang.github.io"
+            >https://pravda-lang.github.io</a
+        >
+        <p>開発期間：2024年9月2日〜現在</p>
+        <p>
+           HaskellとLispを良い所取りした関数型プログラミング言語。<br>
+           遅延評価やラムダ関数、パターンマッチ、関数合成、部分適応など関数型パラダイム的な機能が豊富。<br>
+           Pythonと連携でき、もっとも自信がある作品である。
+        </p>
+        <textarea readonly>
+for (range 100) lambda(i -> {
+    i = + i 1;
+    if (equal 0 (% i 15)) @{
+        print "FizzBuzz";
+    } @{if (equal 0 (% i 3)) @{
+        print "Fizz";
+    } @{if (equal 0 (% i 5)) @{
+        print "Buzz";
+    } @{
+        print i;
+    }}}
+})
+        </textarea>
     </body>
 
-    <script>
-        editor = document.querySelectorAll("textarea").forEach((i) =>
-            CodeMirror.fromTextArea(i, {
-                lineNumbers: true,
-                mode: "javascript",
-                indentUnit: 4,
-                autoCloseBrackets: true,
-            }),
-        );
-    </script>
+    <style>
+        body {
+            margin: 10px;
+        }
+    </style>
 </html>
