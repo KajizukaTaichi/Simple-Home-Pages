@@ -9,10 +9,11 @@
         <title>梶塚太智の自作言語たち</title>
     </head>
 
-    >
+    <body>
         <h1>梶塚太智の自作言語たち</h1>
         <p>
-            プログラミング言語研究者・梶塚太智の作ったプログラミング言語たちのまとめサイトです。
+            プログラミング言語研究者・梶塚太智の作ったプログラミング言語たちのまとめサイトです。<br />
+            原則として、実装され正常に動作した子のみ収録しています。
         </p>
         <hr />
 
@@ -76,9 +77,7 @@ end for</textarea
             >https://kajizukataichi.github.io/like-basic.html</a
         >
         <p>開発期間：2024年7月4日〜2024年7月21日</p>
-        <p>
-            シンプルで使いやすいBasicインタプリタ。GOTOを使う古いタイプ。
-        </p>
+        <p>シンプルで使いやすいBasicインタプリタ。GOTOを使う古いタイプ。</p>
         <textarea readonly>
 10 ON ERROR 130
 20 PRINT "Guess Game\n"
@@ -96,7 +95,6 @@ end for</textarea
 140 GOTO 40
         </textarea>
 
-
         <h2>4. Kajisp</h2>
         <a href="https://kajizukataichi.github.io/script-s.html"
             >https://kajizukataichi.github.io/script-s.html</a
@@ -111,7 +109,6 @@ end for</textarea
     (data println "It's even")
     (data println "It's odd"))
         </textarea>
-
 
         <h2>5. Script S</h2>
         <a href="https://kajizukataichi.github.io/script-s.html"
@@ -185,16 +182,15 @@ print result;
     「クリア！」を表示するのぜ。
         </textarea>
 
-
         <h2>7. Pravda</h2>
         <a href="https://pravda-lang.github.io"
             >https://pravda-lang.github.io</a
         >
         <p>開発期間：2024年9月2日〜現在</p>
         <p>
-           HaskellとLispを良い所取りした関数型プログラミング言語。<br>
-           遅延評価やラムダ関数、パターンマッチ、関数合成、部分適応など関数型パラダイム的な機能が豊富。<br>
-           Pythonと連携でき、もっとも自信がある作品である。
+            HaskellとLispを良い所取りした関数型プログラミング言語。<br />
+            遅延評価やラムダ関数、パターンマッチ、関数合成、部分適応など関数型パラダイム的な機能が豊富。<br />
+            Pythonと連携でき、もっとも自信がある作品である。
         </p>
         <textarea readonly>
 for (range 100) lambda(i -> {
@@ -217,7 +213,7 @@ for (range 100) lambda(i -> {
         >
         <p>開発期間：2024年9月10日〜2024年9月16日</p>
         <p>
-            プロトタイプベースのオブジェクト指向言語。最初はSmalltalk風にするつもりだったが、独自仕様に。<br>
+            プロトタイプベースのオブジェクト指向言語。最初はSmalltalk風にするつもりだったが、独自仕様に。<br />
             プロジェクト名に「talk」が入っているのもSmalltalkの影響が感じ取れる。
         </p>
         <textarea readonly>
@@ -263,7 +259,6 @@ number dec = (self - 1)
 
         </textarea>
 
-
         <h2>10. Objective Shell</h2>
         <a href="https://github.com/KajizukaTaichi/objsh"
             >https://github.com/KajizukaTaichi/objsh</a
@@ -280,14 +275,41 @@ script Write-String "print(22 / 7)"
 App(python3) Start script
         </textarea>
 
+        <h2>11. Stack++</h2>
+        <a href="https://github.com/KajizukaTaichi/stackpp"
+            >https://github.com/KajizukaTaichi/stackpp</a
+        >
+        <p>開発期間：2024年9月27日〜現在</p>
+        <p>
+            Stackの改良発展版。静的に解析してASTを生成するタイプ。元のStackに比べ10倍近く高パフォーマンス。
+        </p>
+        <textarea readonly>
+0 "i" let
+{$i 100 100 mul less-than} {
+    $i 1 add "i" let
+    $i 15 mod 0 equal {
+        "FizzBuzz " print
+    } {
+        $i 3 mod 0 equal {
+            "Fizz " print
+        } {
+            $i 5 mod 0 equal {
+                "Buzz " print
+            } {
+                $i " " concat print
+            } if-else
+        } if-else
+    } if-else
+} while
+        </textarea>
 
-        <h2>11. Megane</h2>
+        <h2>12. Megane</h2>
         <a href="https://github.com/KajizukaTaichi/megane"
             >https://github.com/KajizukaTaichi/megane</a
         >
         <p>開発期間：2024年9月27日〜現在</p>
         <p>
-           ビスケットに触発されて開発した配列指向型の計算モデル。対話環境限定で動くのでREPL全体を載せました。
+            ビスケットに触発されて開発した配列指向型の計算モデル。定義がちょっと大変
         </p>
         <textarea readonly>
 Megane: array-oriented computing model
