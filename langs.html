@@ -9,10 +9,10 @@
         <title>梶塚太智の自作言語たち</title>
     </head>
 
-    <body>
+    >
         <h1>梶塚太智の自作言語たち</h1>
         <p>
-            自作言語処理系の開発が大好きなプログラマ梶塚太智の作ったプログラミング言語たちのまとめサイトです。
+            プログラミング言語研究者・梶塚太智の作ったプログラミング言語たちのまとめサイトです。
         </p>
         <hr />
 
@@ -56,7 +56,7 @@ end for</textarea
             Lisp」に触発され、Simpleを再構築して作った純粋スタック指向言語。<br />
             最初はSimpleのバージョン２にする予定だったが、あまりにも違いが多いため別言語となった。<br />
             シェル機能やWebサーバ、GUIウィンドウ、画像処理そして数値計算などなど様々なディストリビューションが生まれ、開発は８ヶ月も続いた私史上最大のプロジェクト。<br />
-            U-22プログラミングコンテストに応募して結果待ちの状態。開発は既にPravdaに移っている。
+            U-22プログラミングコンテストに応募して結果待ちの状態。開発は既に後継言語に移っている。
         </p>
         <textarea readonly>
 1 101 1 range (i) (
@@ -71,8 +71,33 @@ end for</textarea
 ) map (\n) join print
         </textarea>
 
+        <h2>3. Like Basic</h2>
+        <a href="https://kajizukataichi.github.io/like-basic.html"
+            >https://kajizukataichi.github.io/like-basic.html</a
+        >
+        <p>開発期間：2024年7月4日〜2024年7月21日</p>
+        <p>
+            シンプルで使いやすいBasicインタプリタ。GOTOを使う古いタイプ。
+        </p>
+        <textarea readonly>
+10 ON ERROR 130
+20 PRINT "Guess Game\n"
+30 LET SEED = ROUND(RAND() * 100)
+40 LET GUESS = INT(INPUT("Please guess seed value: "))
+50 IF GUESS &lt; SEED THEN 60 ELSE 80
+60 PRINT "Too small\n"
+70 GOTO 40
+80 IF GUESS &gt; SEED THEN 90 ELSE 110
+90 PRINT "Too big\n"
+100 GOTO 40
+110 PRINT "Great!\n"
+120 EXIT
+130 PRINT "Invaild value\n"
+140 GOTO 40
+        </textarea>
 
-        <h2>3. Kajisp</h2>
+
+        <h2>4. Kajisp</h2>
         <a href="https://kajizukataichi.github.io/script-s.html"
             >https://kajizukataichi.github.io/script-s.html</a
         >
@@ -84,10 +109,11 @@ end for</textarea
 (def number (input "Enter the number: "))
   (if (= (% (number) 2) 0)
     (data println "It's even")
-    (data println "It's odd"))      </textarea>
-            </body>
+    (data println "It's odd"))
+        </textarea>
 
-        <h2>4. Script S</h2>
+
+        <h2>5. Script S</h2>
         <a href="https://kajizukataichi.github.io/script-s.html"
             >https://kajizukataichi.github.io/script-s.html</a
         >
@@ -124,7 +150,7 @@ while i &lt; 100 {
 print result;
         </textarea>
 
-        <h2>5. Noze</h2>
+        <h2>6. Noze</h2>
         <a href="https://github.com/KajizukaTaichi/noze"
             >https://github.com/KajizukaTaichi/noze</a
         >
@@ -160,7 +186,7 @@ print result;
         </textarea>
 
 
-        <h2>6. Pravda</h2>
+        <h2>7. Pravda</h2>
         <a href="https://pravda-lang.github.io"
             >https://pravda-lang.github.io</a
         >
@@ -185,7 +211,7 @@ for (range 100) lambda(i -> {
 })
         </textarea>
 
-        <h2>7. Idletalk</h2>
+        <h2>8. Idletalk</h2>
         <a href="https://github.com/KajizukaTaichi/idletalk"
             >https://github.com/KajizukaTaichi/idletalk</a
         >
@@ -200,7 +226,7 @@ number dec = (self - 1)
 (5 inc) dec
         </textarea>
 
-        <h2>8. OpenMind</h2>
+        <h2>9. OpenMind</h2>
         <a href="https://github.com/KajizukaTaichi/openmind"
             >https://github.com/KajizukaTaichi/openmind</a
         >
@@ -235,6 +261,56 @@ number dec = (self - 1)
     数を判定して表示する。
 」を反復する。
 
+        </textarea>
+
+
+        <h2>10. Objective Shell</h2>
+        <a href="https://github.com/KajizukaTaichi/objsh"
+            >https://github.com/KajizukaTaichi/objsh</a
+        >
+        <p>開発期間：2024年9月22日〜2024年9月24日</p>
+        <p>
+            純粋オブジェクト指向型のシェル。明快なアーキテクチャだが、厳格過ぎて利便性はお世辞にも良いとは言えない。
+        </p>
+        <textarea readonly>
+work = Folder("work")
+Current-Folder = work
+script = File("pi.py")
+script Write-String "print(22 / 7)"
+App(python3) Start script
+        </textarea>
+
+
+        <h2>11. Megane</h2>
+        <a href="https://github.com/KajizukaTaichi/megane"
+            >https://github.com/KajizukaTaichi/megane</a
+        >
+        <p>開発期間：2024年9月27日〜現在</p>
+        <p>
+           ビスケットに触発されて開発した配列指向型の計算モデル。対話環境限定で動くのでREPL全体を載せました。
+        </p>
+        <textarea readonly>
+Megane: array-oriented computing model
+(c) 2024 梶塚太智 All rights reversed.
+
+Input meganes that defines rule
+> 0 and 0 = 0
+> 0 and 1 = 0
+> 1 and 0 = 0
+> 1 and 1 = 1
+> 0 or 0 = 0
+> 0 or 1 = 1
+> 1 or 0 = 1
+> 1 or 1 = 1
+>
+Meganes: [Megane { before: ["0", "and", "0"], after: "0" }, Megane { before: ["0", "and", "1"], after: "0" }, Megane { before: ["1", "and", "0"], after: "0" }, Megane { before: ["1", "and", "1"], after: "1" }, Megane { before: ["0", "or", "0"], after: "0" }, Megane { before: ["0", "or", "1"], after: "1" }, Megane { before: ["1", "or", "0"], after: "1" }, Megane { before: ["1", "or", "1"], after: "1" }]
+Input expr to be processing
+> 1 and 0 or 1 or 0
+Expr: ["1", "and", "0", "or", "1", "or", "0"]
+Log: ["1", "and", "0", "or", "1", "or", "0"]
+Log: ["0", "or", "1", "or", "0"]
+Log: ["1", "or", "0"]
+Result: "1"
         </textarea>
     </body>
 
