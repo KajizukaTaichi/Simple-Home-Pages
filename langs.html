@@ -23,7 +23,7 @@
         >
         <p>開発期間：2023年9月4日〜2024年1月10日</p>
         <p>
-            逆ポーランド記法の計算機に変数機能と制御構文をゴテゴテ付けて作った言語。<br />
+            逆ポーランド記法の計算機に変数機能と制御構文をゴテゴテ付けて作った人生初の自作言語。<br />
             学力向上アプリコンテスト以来コンピュータ科学教育に興味があったので、デバッグ時にプログラムを解説する機能を付けて教育用言語にした。<br />
             商業化を試みたもののコードが肥大化し、プロジェクトは後継のStackに移っていく。
         </p>
@@ -307,7 +307,7 @@ App(python3) Start script
         <a href="https://github.com/KajizukaTaichi/megane"
             >https://github.com/KajizukaTaichi/megane</a
         >
-        <p>開発期間：2024年9月27日〜現在</p>
+        <p>開発期間：2024年9月26日〜2024年9月27日</p>
         <p>
             ビスケットに触発されて開発した配列指向型の計算モデル。定義がちょっと大変。<br />
             メガネの基本動作は、「多数から一つへ」だ。<code>1 + 2</code
@@ -336,6 +336,30 @@ Log: ["1", "and", "0", "or", "1", "or", "0"]
 Log: ["0", "or", "1", "or", "0"]
 Log: ["1", "or", "0"]
 Result: "1"
+        </textarea>
+
+        <h2>13. Statia</h2>
+        <a href="https://github.com/KajizukaTaichi/statia"
+            >https://github.com/KajizukaTaichi/statia</a
+        >
+        <p>開発期間：2024年9月27日〜現在</p>
+        <p>
+            型注釈が付けられる型付きLISP風言語。注釈があると静的、無いと動的になる、同じLISPでもKajispの頃より言語開発スキルかなり成長した感覚がする。
+        </p>
+        <textarea readonly>
+(define '(fizzbuzz i:number)
+    '(if-else (= 0 (% i 15)):bool
+        "FizzBuzz":string
+        '(if-else (= 0 (% i 3)):bool
+            "Fizz":string
+            '(if-else (= 0 (% i 5)):bool
+                "Buzz":string
+                '(cast i "string")
+            ):list
+        ):list
+    ):list
+):function
+(print (join (map (range 1 101):list fizzbuzz:function):list new-line:string):string)
         </textarea>
     </body>
 
