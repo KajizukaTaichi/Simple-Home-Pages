@@ -275,35 +275,7 @@ script Write-String "print(22 / 7)"
 App(python3) Start script
         </textarea>
 
-        <h2>11. Stack++</h2>
-        <a href="https://github.com/KajizukaTaichi/stackpp"
-            >https://github.com/KajizukaTaichi/stackpp</a
-        >
-        <p>開発期間：2024年9月27日〜現在</p>
-        <p>
-            Stackの改良発展版。静的に解析してASTを生成するタイプ。元のStackに比べ10倍近く高パフォーマンス。
-        </p>
-        <textarea readonly>
-0 "i" let
-{$i 100 100 mul less-than} {
-    $i 1 add "i" let
-    $i 15 mod 0 equal {
-        "FizzBuzz " print
-    } {
-        $i 3 mod 0 equal {
-            "Fizz " print
-        } {
-            $i 5 mod 0 equal {
-                "Buzz " print
-            } {
-                $i " " concat print
-            } if-else
-        } if-else
-    } if-else
-} while
-        </textarea>
-
-        <h2>12. Megane</h2>
+        <h2>11. Megane</h2>
         <a href="https://github.com/KajizukaTaichi/megane"
             >https://github.com/KajizukaTaichi/megane</a
         >
@@ -336,6 +308,34 @@ Log: ["1", "and", "0", "or", "1", "or", "0"]
 Log: ["0", "or", "1", "or", "0"]
 Log: ["1", "or", "0"]
 Result: "1"
+        </textarea>
+
+        <h2>12. Stack++</h2>
+        <a href="https://github.com/KajizukaTaichi/stackpp"
+            >https://github.com/KajizukaTaichi/stackpp</a
+        >
+        <p>開発期間：2024年9月27日〜現在</p>
+        <p>
+            Stackの改良発展版。静的に解析してASTを生成するタイプ。元のStackに比べ10倍近く高パフォーマンス。
+        </p>
+        <textarea readonly>
+0 "i" let
+{$i 100 100 mul less-than} {
+    $i 1 add "i" let
+    $i 15 mod 0 equal {
+        "FizzBuzz " print
+    } {
+        $i 3 mod 0 equal {
+            "Fizz " print
+        } {
+            $i 5 mod 0 equal {
+                "Buzz " print
+            } {
+                $i " " concat print
+            } if-else
+        } if-else
+    } if-else
+} while
         </textarea>
 
         <h2>13. Statia</h2>
