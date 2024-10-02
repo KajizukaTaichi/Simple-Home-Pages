@@ -10,52 +10,68 @@
     </head>
 
     <body>
-        <h1 onclick="window.open('https://github.com/KajizukaTaichi');">
-            梶塚太智
-        </h1>
+        <h1>梶塚太智</h1>
         <p>
-            プログラミング言語研究者(アマチュア)です。自作した言語は<a
-                href="langs.html"
-                >こちら</a
-            >に纏めてあります。
+            プログラミング言語研究者(アマチュア)です。言語処理系を作るのが大好き過ぎてそればっかやってる人です。
+            自作した言語は<a href="langs.html">こちら</a>に纏めてあります。
         </p>
+        <a href="https://github.com/KajizukaTaichi">GitHub</a>
+        <a href="https://qiita.com/KajizukaTaichi">Qiita</a>
 
         <hr />
 
-        <h2>出来る言語</h2>
+        <h2>使ってる言語</h2>
         <ul>
-            <li>Rust<br />チョットデキル。自作言語は基本これで書きます。</li>
             <li>
-                Python<br />
+                <span style="border-bottom-style: inset">Rust</span
+                ><br />チョットデキル。自作言語は基本これで実装します。
+            </li>
+            <li>
+                <span style="border-bottom-style: inset">Python</span><br />
                 式の評価器の実装を<code>eval</code>関数で楽したい時に使う。
             </li>
             <li>
-                HTML/CSS<br />無ければこのサイトはどうやって作った？当然です。
+                <span style="border-bottom-style: inset">HTML/CSS</span
+                ><br />無ければこのサイトはどうやって作った？当然です。
             </li>
             <li>
-                JavaScript<br />バニラJSこそ至高！React？なにそれ美味しいの？
+                <span style="border-bottom-style: inset">JavaScript</span
+                ><br />バニラJSこそ至高！React？なにそれ美味しいの？
             </li>
         </ul>
+
+        <!-- <h2>自作した言語</h2>
+
+        <iframe src="langs.html"></iframe> -->
 
         <h2>論文</h2>
-        <p>いつか情報処理学会に出したい。</p>
-        <ul>
-            <li>
-                <a
-                    href="paper/Statia：式レベル型注釈による段階的型付き Lisp 系言語.pdf"
-                    >Statia：式レベル型注釈による段階的型付き Lisp 系言語</a
-                >
-            </li>
-        </ul>
-
-        <h2>一言</h2>
-        <p>よろしくね！</p>
+        <p>
+            私が書いた論文です。まだ論文誌には出していないものです。論文誌に出せたらそのリンクを貼ります。
+        </p>
+        <iframe
+            src="paper/Statia：式レベル型注釈による段階的型付き Lisp 系言語.pdf"
+            >Statia：式レベル型注釈による段階的型付き Lisp 系言語
+        </iframe>
     </body>
 
     <style>
         body,
         li {
-            margin: 10px;
+            margin: 15px;
+        }
+
+        td {
+            padding: 5px;
+            border-bottom-style: double;
+        }
+
+        li {
+            margin-left: -10px;
+        }
+
+        iframe {
+            width: 50vw;
+            height: 50vh;
         }
     </style>
 </html>
