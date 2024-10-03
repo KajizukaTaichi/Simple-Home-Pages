@@ -71,7 +71,7 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
                             translateY: ["100vh", "0"],
                             opacity: [0, 1], // 不透明度を0から1に変化させる
                             duration: 1000, // アニメーションの持続時間
-                            easing: "linear", // イージング効果
+                            easing: "easeInOutQuad", // イージング効果
                         });
                         is_showed = true;
                     }
@@ -93,6 +93,7 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
             }
 
             body {
+                overflow: hidden;
                 font-family: "Roboto", sans-serif;
                 margin: 0;
                 padding: 0;
@@ -110,12 +111,7 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
                 transform: translateY(100vh);
                 opacity: 0;
                 margin-top: 50px;
-                /* background-color: azure; */
-                /* border-style: solid; */
-                /* border-radius: 10px; */
-                /* border-color: lightblue; */
                 background-color: transparent;
-                transform: translateY(20px);
                 transition:
                     opacity 0.5s ease,
                     transform 0.5s ease;
@@ -125,7 +121,6 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
 
             p {
                 font-size: x-large;
-                /* padding-bottom: 30px; */
             }
 
             pre {
