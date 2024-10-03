@@ -61,6 +61,7 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
                     if (!is_showed) {
                         const newSection =
                             document.getElementById("newSection");
+                        const startButton = document.getElementById("start");
 
                         // hiddenクラスを削除
                         newSection.classList.remove("hidden");
@@ -73,6 +74,15 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
                             duration: 1000, // アニメーションの持続時間
                             easing: "easeInOutQuad", // イージング効果
                         });
+
+                        // Anime.jsでアニメーションを設定
+                        anime({
+                            targets: startButton,
+                            opacity: [1, 0], // 不透明度を0から1に変化させる
+                            duration: 2000, // アニメーションの持続時間
+                            easing: "easeInOutQuad", // イージング効果
+                        });
+                        startButton.style.cursor = "default";
                         is_showed = true;
                     }
                 });
@@ -128,11 +138,16 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
                 user-select: text;
                 text-align: left;
                 height: 15h;
+                cursor: text;
             }
 
             ::selection {
-                background-color: gray;
+                background-color: black;
                 color: white;
+            }
+
+            a {
+                cursor: zoom-in;
             }
 
             .hidden {
