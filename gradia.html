@@ -93,6 +93,7 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
             }
 
             body {
+                user-select: none;
                 overflow: hidden;
                 font-family: "Roboto", sans-serif;
                 margin: 0;
@@ -124,8 +125,14 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
             }
 
             pre {
+                user-select: text;
                 text-align: left;
                 height: 15h;
+            }
+
+            ::selection {
+                background-color: gray;
+                color: white;
             }
 
             .hidden {
