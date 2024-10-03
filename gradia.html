@@ -56,26 +56,35 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
 
     <script>
         document.getElementById("start").addEventListener("click", function () {
+            const mainSection = document.getElementById("main");
             const newSection = document.getElementById("newSection");
             const startButton = document.getElementById("start");
+            const duration = 1500;
+
             newSection.classList.remove("hidden");
+            startButton.style.cursor = "default";
 
             anime({
                 targets: newSection,
                 translateY: ["100vh", "0"],
                 opacity: [0, 1],
-                duration: 1500,
+                duration: duration,
+                easing: "easeInOutQuad",
+            });
+
+            anime({
+                targets: mainSection,
+                top: ["17vh", "0vh"],
+                duration: duration,
                 easing: "easeInOutQuad",
             });
 
             anime({
                 targets: startButton,
                 opacity: [1, 0],
-                duration: 1500,
+                duration: duration,
                 easing: "easeInOutQuad",
             });
-            startButton.style.cursor = "default";
-            is_showed = true;
         });
     </script>
 
@@ -94,8 +103,9 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
         }
 
         body {
-            user-select: none;
             overflow: hidden;
+            position: relative;
+            user-select: none;
             font-family: monospace;
             margin: 0;
             padding: 0;
@@ -107,6 +117,8 @@ Error! the passed argument value `"7 "` is different to expected type `number` o
         }
 
         #main {
+            position: absolute;
+            top: 17%;
             text-align: center;
             width: 100%;
             padding: 10%;
