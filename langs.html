@@ -275,42 +275,7 @@ script Write-String "print(22 / 7)"
 App(python3) Start script
         </textarea>
 
-        <h2>11. Megane</h2>
-        <a href="https://github.com/KajizukaTaichi/megane"
-            >https://github.com/KajizukaTaichi/megane</a
-        >
-        <p>開発期間：2024年9月26日〜2024年9月27日</p>
-        <p>
-            ビスケットに触発されて開発した配列指向型の計算モデル。定義がちょっと大変。<br />
-            メガネの基本動作は、「多数から一つへ」だ。<code>1 + 2</code
-            >という３つのシンボルからなる式パターンを<code>3</code>という一つの答えに変換する等など。<br />
-            それを繰り返すと、式の配列がだんだん短くなって、長さが一つに収束したらそれが答えだ
-        </p>
-        <textarea readonly>
-Megane: array-oriented computing model
-(c) 2024 梶塚太智 All rights reversed.
-
-Input meganes that defines rule
-> 0 and 0 = 0
-> 0 and 1 = 0
-> 1 and 0 = 0
-> 1 and 1 = 1
-> 0 or 0 = 0
-> 0 or 1 = 1
-> 1 or 0 = 1
-> 1 or 1 = 1
->
-Meganes: [Megane { before: ["0", "and", "0"], after: "0" }, Megane { before: ["0", "and", "1"], after: "0" }, Megane { before: ["1", "and", "0"], after: "0" }, Megane { before: ["1", "and", "1"], after: "1" }, Megane { before: ["0", "or", "0"], after: "0" }, Megane { before: ["0", "or", "1"], after: "1" }, Megane { before: ["1", "or", "0"], after: "1" }, Megane { before: ["1", "or", "1"], after: "1" }]
-Input expr to be processing
-> 1 and 0 or 1 or 0
-Expr: ["1", "and", "0", "or", "1", "or", "0"]
-Log: ["1", "and", "0", "or", "1", "or", "0"]
-Log: ["0", "or", "1", "or", "0"]
-Log: ["1", "or", "0"]
-Result: "1"
-        </textarea>
-
-        <h2>12. Stack++</h2>
+        <h2>11. Stack++</h2>
         <a href="https://github.com/KajizukaTaichi/stackpp"
             >https://github.com/KajizukaTaichi/stackpp</a
         >
@@ -338,7 +303,7 @@ Result: "1"
 } while
         </textarea>
 
-        <h2>13. Gradia</h2>
+        <h2>12. Gradia</h2>
         <a href="https://gradia-lang.github.io/"
             >https://gradia-lang.github.io/</a
         >
@@ -362,7 +327,7 @@ Result: "1"
 (print (join (map (range 1 101):list fizzbuzz:function):list new-line:string):string)
         </textarea>
 
-        <h2>14. Svete Basic</h2>
+        <h2>13. Svete Basic</h2>
         <a href="https://github.com/KajizukaTaichi/svetebasic"
             >https://github.com/KajizukaTaichi/svetebasic</a
         >
