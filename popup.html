@@ -3,10 +3,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
-        />
+
     </head>
 
     <script>
@@ -43,8 +40,9 @@
         } else {
             time = 500;
         }
+
+        let interval;
         
-        let count = 10;
         let addpopup = function() {
             let popup = document.createElement("div");     
 
@@ -59,18 +57,18 @@
             popup.style.alignContent = "center";
 
             let title = document.createElement("h1");
-            title.innerText = message;
-            title.className = "title";
+            title.innerHTML = message;
             popup.appendChild(title);
 
             let button = document.createElement("button");
             button.innerText = "OK";
-            button.className = "button is-primary";
+            button.className = "button";
+            button.style.backgroundColor = back;
+            button.style.color = color;
             button.addEventListener("click", function() {
-                for (var i = 0; i < count; i++) {
-                    addpopup();
-                }
-                count = count * 2;
+                time = time / 2;
+                clearInterval(interval);
+                interval = setInterval(addpopup, time);
             });
             popup.appendChild(button);
 
@@ -86,22 +84,32 @@
         });
 
         document.addEventListener("DOMContentLoaded", function() {
-            setInterval(addpopup, time);
+            interval = setInterval(addpopup, time);
         })
     </script>
 
     <style>
-        div {
-            width: 500px;
-            height: 300px;
-
-            position: absolute;
+        div, button {
             background-color: #f0f0f0;
             padding: 10px;
             overflow: hidden;
             backdrop-filter: blur(10px);
             border-radius: 5px;
+           
+        }
+
+        div {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            width: 500px;
+            height: 300px;
+        }
+
+        button {
+            padding-left: 3vh;
+            padding-right: 3vh;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
         }
 
         body {
