@@ -3,6 +3,10 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        />
     </head>
 
     <script>
@@ -51,21 +55,38 @@
 
             popup.style.backgroundColor = back;
             popup.style.color = color;
-            
-            popup.addEventListener("click", function() {
-                addpopup()
-            });
+            popup.style.textAlign = "center";
+            popup.style.alignContent = "center";
 
             let title = document.createElement("h1");
             title.innerText = message;
-
+            title.className = "title";
             popup.appendChild(title);
+
+            let button = document.createElement("button");
+            button.innerText = "OK";
+            button.className = "button is-primary";
+            button.addEventListener("click", function() {
+                for (var i = 0; i < count; i++) {
+                    addpopup();
+                }
+                count = count * 2;
+            });
+            popup.appendChild(button);
+
             document.body.appendChild(popup);
-            count += 20;
+            
         };
 
+        document.addEventListener("keydown", function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+        });
+
         document.addEventListener("DOMContentLoaded", function() {
-            setInterval(addpopup, time)
+            setInterval(addpopup, time);
         })
     </script>
 
