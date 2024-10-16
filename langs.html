@@ -348,11 +348,44 @@ End
 
 Print limit & "! = " & fact
         </textarea>
+
+        <h2>14. Aqua</h2>
+        <a href="https://github.com/KajizukaTaichi/aqua"
+            >https://github.com/KajizukaTaichi/aqua</a
+        >
+        <p>開発期間：2024年10月12日〜2024年9月14日</p>
+        <p>クラスベースのオブジェクト指向型言語。Ruby言語があるならAqua言語があって然るべきであると考え開発した。</p>
+        <textarea readonly>
+player = class{
+    name; hp; level;
+
+    get-name = method() { name };
+    get-hp = method() { hp };
+    get-level = method() { level };
+
+    __display__ = method() {
+        hp = "HP" + (hp to-string);
+        level = "Level" + (level to-string);
+        name + (" " + (hp + (" " + level)))
+    }
+};
+
+
+alice = player{ name = "Alice"; hp = 80; level = 3 };
+bob = player{ name = "Bob"; hp = 50; level = 1 };
+
+console writeln alice; console writeln bob;
+
+console write "HP different: ";
+value = ((alice get-hp) - (bob get-hp));
+console writeln value
+        </textarea>
     </body>
 
     <style>
         body {
             margin: 10px;
+            margin-bottom: 50vh;
         }
     </style>
 </html>
