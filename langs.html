@@ -353,7 +353,7 @@ Print limit & "! = " & fact
         <a href="https://github.com/KajizukaTaichi/aqua"
             >https://github.com/KajizukaTaichi/aqua</a
         >
-        <p>開発期間：2024年10月12日〜2024年9月14日</p>
+        <p>開発期間：2024年10月12日〜2024年10月14日</p>
         <p>クラスベースのオブジェクト指向型言語。Ruby言語があるならAqua言語があって然るべきであると考え開発した。</p>
         <textarea readonly>
 player = class{
@@ -379,6 +379,23 @@ console writeln alice; console writeln bob;
 console write "HP different: ";
 value = ((alice get-hp) - (bob get-hp));
 console writeln value
+        </textarea>
+
+        <h2>15. NormScript</h2>
+        <a href="https://github.com/KajizukaTaichi/aqua"
+            >https://github.com/KajizukaTaichi/aqua</a
+        >
+        <p>開発期間：2024年10月22日〜現在</p>
+        <p>ごく普通のプログラミング言語。</p>
+        <textarea readonly>
+function hello (name) {
+    "Hello, " + name + "!"
+};
+
+let members = ["Alice", "Bob"];
+for message in map(members, hello) {
+    print message;
+};
         </textarea>
     </body>
 
