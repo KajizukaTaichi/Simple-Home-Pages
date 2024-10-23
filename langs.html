@@ -382,20 +382,30 @@ console writeln value
         </textarea>
 
         <h2>15. NormScript</h2>
-        <a href="https://github.com/KajizukaTaichi/aqua"
-            >https://github.com/KajizukaTaichi/aqua</a
+        <a href="https://github.com/KajizukaTaichi/normscript"
+            >https://github.com/KajizukaTaichi/normscript</a
         >
         <p>開発期間：2024年10月22日〜現在</p>
-        <p>ごく普通のプログラミング言語。</p>
+        <p>名前の通り普通の言語で、「何の変哲も無い普通のプログラミング言語」と自虐したAboutがある。<br>しかし機能は関数オブジェクトを扱えるなど高性能。でもやっぱり普通で個性/特徴が薄い。</p>
         <textarea readonly>
-function hello (name) {
-    "Hello, " + name + "!"
+function fizzbuzz (n) {
+    let fizz? = (n % 3 == 0);
+    let buzz? = (n % 5 == 0);
+    let msg = "";
+
+    if fizz? {
+        let msg = "Fizz";
+    };
+    if buzz? {
+        let msg = msg + "Buzz";
+    };
+    if (msg == "") {
+        let msg = n;
+    };
+    msg
 };
 
-let members = ["Alice", "Bob"];
-for message in map(members, hello) {
-    print message;
-};
+print join(map(range(1, 100 + 1, 1), fizzbuzz), new-line)
         </textarea>
     </body>
 
