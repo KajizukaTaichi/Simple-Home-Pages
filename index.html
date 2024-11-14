@@ -1,81 +1,117 @@
-<!doctype html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>梶塚太智</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梶塚太智 (Kajizuka Taichi)</title>
 
-    <body>
-        <h1>梶塚太智</h1>
-        <a href="https://github.com/KajizukaTaichi">GitHub</a>
-        <a href="https://qiita.com/KajizukaTaichi">Qiita</a>
-        <a href="https://connpass.com/user/KajizukaTaichi/">connpass</a>
-
-        <p>
-            プログラミング言語研究者...と言うよりプログラミング言語オタクです。<br>オブジェクト指向から関数型やスタックマシンさらには日本語ベースなど、色々なパラダイムの言語を作ってます。
-            <br>基本的にフレームワークや外部のライブラリに依存せず、構文解析から評価器まで全て自作してます。<br>
-            自作した言語は<a href="langs.html">こちら</a>に纏めてあります。
-        </p>
-
-        <hr />       
-
-        <h2>論文</h2>
-        <p>
-            私が書いた論文です。まだ情報処理学会には出せてないのですが、論文誌に載せたらそのリンクを貼ります。
-        </p>
-        <iframe src="paper/gradia.pdf"> </iframe>
-
-        <h2>サービス</h2>
-        <p>私が開発して公開したサービスです。</p>
-        <ul>
-            <li>
-                <a href="https://kajizukataichi.github.io/looplayer">LooPlayer</a
-                ><br />指定範囲でYouTubeを無限再生する作業用BGMプレイヤー
-            </li>
-            <li>
-                <a href="https://kajizukataichi.github.io/RizeOffice">RizeOffice</a
-                ><br />Stack言語のコードで式が書ける表計算ソフトウェア
-            </li>
-            <li>
-                <a href="https://kajizukataichi.github.io/linna">Linna</a
-                ><br />あなたを怒らせない 快適さを求めたコードエディタ
-            </li>
-        </ul>
-
-        <h2>受賞歴</h2>
-        <img src="certs.jpg" alt="">
-    </body>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            height: 150vh;
-        }
-
-        body,
-        li {
-            margin: 15px;
-        }
-
-        td {
-            padding: 5px;
-            border-bottom-style: double;
-        }
-
-        h1 {
-            margin-bottom: 0;
-        }
-
-        li {
-            margin-left: -10px;
-        }
-
-        iframe {
-            width: 50vw;
-            height: 50vh;
-        }
-
-        img {
-            width: 50vw;
-        }
+        /* Custom styling for the site */
+        .navbar-custom { background-color: #333; }
+        .navbar-brand, .nav-link { color: #f8f9fa !important; }
+        .hero { background-color: #282828; color: white; padding: 100px 0; text-align: center; }
+        .section-title { font-weight: bold; margin-bottom: 20px; color: #555; }
+        .project-card { box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
+        .footer { background-color: #333; color: white; padding: 20px 0; text-align: center; }
+        .title { font-size: 60px; font-family: cursive;}
+        body { font-size: 1.1em; font-family: monospace;}
     </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">Kajizuka Taichi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="title">梶塚太智</h1>
+        <p>Programming Languages Developer</p>
+        <a href="#projects" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+    <h2 class="section-title">About Me</h2>
+    <p>Hello! I'm a technology enthusiast with a passion for low-level programming, language design, and creating interpreter of programming languages.</p>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="container my-5">
+    <h2 class="section-title">Technical Skills</h2>
+    <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item">Rust</li>
+        <li class="list-group-item">Python</li>
+        <li class="list-group-item">HTML/CSS</li>
+        <li class="list-group-item">JavaScript</li>
+        <li class="list-group-item">Language Design</li>
+        <li class="list-group-item">Interpreter</li>
+        <li class="list-group-item">LLVM</li>
+    </ul>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container my-5">
+    <h2 class="section-title">Projects</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card project-card">
+                <img height="200" src="https://stack-community.github.io/image2.png" class="card-img-top" alt="Project Image">
+                <div class="card-body">
+                    <h5 class="card-title">Stack</h5>
+                    <p class="card-text">Powerful script language with stack-oriented approach </p>
+                    <a href="https://stack-community.github.io/" class="btn btn-outline-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card project-card">
+                <img height="200" src="https://pravda-lang.github.io/image6.png" class="card-img-top" alt="Project Image">
+                <div class="card-body">
+                    <h5 class="card-title">Pravda</h5>
+                    <p class="card-text">A functional programming language that best of both worlds between Haskell and Lisp </p>
+                    <a href="https://pravda-lang.github.io/" class="btn btn-outline-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card project-card">
+                <img height="200" src="https://protopedia.net/pic/245bbd0d-727d-490f-9ac0-11f37b8b0822.png" class="card-img-top" alt="Project Image">
+                <div class="card-body">
+                    <h5 class="card-title">Gradia</h5>
+                    <p class="card-text">Lisp like programming language that can give type annotation for gradual typing</p>
+                    <a href="https://gradia-lang.github.io/" class="btn btn-outline-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <pre>&copy; 2024 Kajizuka Taichi.  All rights reserved</pre>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
