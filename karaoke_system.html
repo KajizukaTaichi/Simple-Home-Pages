@@ -23,14 +23,15 @@
             function Reserve({ singer, song }) {
                 return (
                     <div className="reserve">
-                        <p>曲　：{song}</p>
                         <p>歌手：{singer}</p>
+                        <p>楽曲：{song}</p>
                     </div>
                 );
             }
 
             function App() {
                 const [reserve, setReserve] = React.useState([]);
+                const [index, setIndex] = React.useState(1);
                 const singer = React.useRef("");
                 const song = React.useRef("");
 
@@ -42,8 +43,9 @@
                                     event.preventDefault();
                                     setReserve([
                                         ...reserve,
-                                        [singer.current, song.current],
+                                        [index, singer.current, song.current],
                                     ]);
+                                    setIndex(index + 1);
                                 }}
                             >
                                 <input
@@ -73,10 +75,10 @@
                             </button>
                         </div>
                         <ul>
-                            {reserve.map((item, index) => (
+                            {reserve.map((item) => (
                                 <div>
-                                    <p>{index + 1}番目</p>
-                                    <Reserve singer={item[0]} song={item[1]} />
+                                    <p>{item[0]}番目</p>
+                                    <Reserve singer={item[1]} song={item[2]} />
                                 </div>
                             ))}
                         </ul>
